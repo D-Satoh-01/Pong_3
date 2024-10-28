@@ -54,7 +54,7 @@ var player_move_flag_up;
 var player_move_flag_down;
 
 var player_speed = 3;
-var cpu_speed = 1;
+var cpu_speed = 1.5;
 
 var score_player = 0;
 var score_cpu = 0;
