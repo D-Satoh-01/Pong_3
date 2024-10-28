@@ -159,7 +159,7 @@ function game_manager(){
     if (restart == true){
         counter_3 += 1;
         console.log(counter_3);
-        if (counter_3 >= 10){
+        if (counter_3 >= 5){
             score_cpu = 0;
             counter_3 = 0;
             restart = false;
