@@ -29,17 +29,33 @@
         display: flex;
         flex-flow: column;
     }
+
+    .area_2 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .buttons_1 {
+        text-align: center;
+    }
+
 </style>
 
 <body>
-    <div class="area_1">
-        <script src="./script.js"></script>
-        <canvas id="screen" width="900" height="550"></canvas>
-        <h2></h2>
-        <h2>移動操作：矢印キー　　　　　　ゲーム開始：スペースキー</h2>
-        <h2>3点取得でレベルクリアです。3点失点でゲームオーバーです。</h2>
-        <h2>レベルが進むにつれてCPUが強くなります。</h2>
-        <h2></h2>
+    <div class="area_2">
+        <div class="area_1">
+            <script src="./script.js"></script>
+            <canvas id="screen" width="900" height="550"></canvas>
+            <h2></h2>
+            <h2>移動操作：矢印キー　　　　　　ゲーム開始：スペースキー</h2>
+            <h2>3点取得でレベルクリアです。3点失点でゲームオーバーです。</h2>
+            <h2>レベルが進むにつれてCPUが強くなります。</h2>
+        </div>
+        <div class="buttons_1">
+            <button id="button_up" onclick="click_button_up()">▲</button><br><br><br>
+            <button id="button_left" onclick="click_button_left()">◀</button>　　　　　　　　<button id="button_right" onclick="click_button_right()">▶</button><br><br><br>
+            <button id="button_down" onclick="click_button_down()">▼</button>
+        </div>
     </div>
 </body>
 

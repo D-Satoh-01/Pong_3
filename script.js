@@ -151,6 +151,7 @@ function game_manager(){
         if (score_cpu == 3){
             score_player = 0;
             score_cpu = 0;
+            cpu_speed = 1.5;
             game_run = false;
             gameover = true;
         }
@@ -339,6 +340,19 @@ function move_player(){
             player_y -= player_speed;
         }
     }
+}
+
+function click_button_up(){
+    player_move_flag_up = true;
+}
+function click_button_left(){
+    player_move_flag_left = true;
+}
+function click_button_right(){
+    player_move_flag_right = true;
+}
+function click_button_down(){
+    player_move_flag_down = true;
 }
 
 function timer_move_cpu_x(){
