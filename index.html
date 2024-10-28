@@ -24,12 +24,22 @@
         color: rgb(20,20,20);
         text-align: center;
     }
+
+    .area_1 {
+        display: flex;
+        flex-flow: column;
+    }
 </style>
 
 <body>
-    <script src="./script.js"></script>
-    <canvas id="screen" width="900" height="550"></canvas>
-    <h2></h2>
+    <div class="area_1">
+        <script src="./script.js"></script>
+        <canvas id="screen" width="900" height="550"></canvas>
+        <h2>移動操作：矢印キー</h2>
+        <h2>ゲーム開始：スペースキー</h2>
+        <h2>ルール：3点取得でレベルクリアです。3点失点でゲームオーバーです。</h2>
+        <h2></h2>
+    </div>
 </body>
 
 </html>

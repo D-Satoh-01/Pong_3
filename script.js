@@ -7,6 +7,7 @@ const TIMER_INTERVAL = 15; //15で大体FPS=60
 var frame_timer;
 var counter_1 = 0;
 var counter_2 = 0;
+var counter_3 = 0;
 var randomized_number_1;
 var randomized_number_2;
 
@@ -63,6 +64,7 @@ var level = 1;
 var game_run = false;
 var level_clear = false;
 var gameover = false;
+var restart = false;
 
 //ブラウザが読み込まれたときに実行される関数
 window.onload = function(){
@@ -151,6 +153,16 @@ function game_manager(){
             score_cpu = 0;
             game_run = false;
             gameover = true;
+        }
+    }
+
+    if (restart == true){
+        counter_3 += 1;
+        console.log(counter_3);
+        if (counter_3 >= 10){
+            score_cpu = 0;
+            counter_3 = 0;
+            restart = false;
         }
     }
 }
@@ -289,10 +301,18 @@ function move_player_input(){
         //ゲーム開始
         if (inputtedValue.keyCode == 32 && game_run == false){
             game_run = true;
+            restart = true;
         }
-        if (inputtedValue.keyCode == 32 && gameover == true){
+
+        if (inputtedValue.keyCode == 32 && game_run == true && gameover == true){
             gameover = false;
+            restart = true;
             level = 1;
+            counter_3 += 1;
+            if (counter_3 >= 40){
+                score_cpu = 0;
+                counter_3 = 0;
+            }
         }
     }
 }
